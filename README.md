@@ -11,7 +11,10 @@ This particular repository (`start-here`) is meant for top level documentation o
 - Etc.
 
 ##### Who Is This For?
-Everyone who is going to use, using, or are woking in the Automation and Control Labs at Fredrik Bajers Vej 7C. You may be a Bachelor-, Masters-, or PhD-student, staff, visiting scholar, or visiting high-school student. Please read on an you may acheive enlightenment. 
+Everyone who is going to use, using, or are woking in the Automation and Control Labs at Fredrik Bajers Vej 7C. You may be a Bachelor-, Masters-, or PhD-student, staff, visiting scholar, or visiting high-school student. Please read on an you may acheive enlightenment.
+
+##### What Goes here?
+Well, each of the other repositories in this organization is supposed to hold software. It is good practice to put documentation with the software, either in raw text or in the wikis provided by GitHub. That documentation should be specific to the software, everything else should go here. For further discourse on the documentation process, have a look at [How to Document](how-to-document.md).
 
 ##### Should I Contribute?
 Yes! If you know something that is not written in these pages, chances are that you can contribute valuable knowledge. Go to the [How to Contribute](how-to-contribute.md) page.
