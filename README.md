@@ -1,4 +1,6 @@
 # Start Here
+<img src="images/CA logo.png" alt="CA Logo" width= "50px"/>
+
 You have entered the world of the Automation and Control Labs at Aalborg University. This GitHub organization aims to collect the software and documentation for the experimental setups in these labs.
 
 This particular repository (`start-here`) is meant for top level documentation of everything that goes on. You may find:
