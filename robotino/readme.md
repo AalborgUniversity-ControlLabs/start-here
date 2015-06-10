@@ -37,7 +37,7 @@ I (Karl D. Hansen) have not connected the Robotino to the internet, so instead i
 
 The PHP, automatically choses the current stable version.
 
-Next copy the files to the robotino wit SCP:
+Next copy the files to the Robotino wit SCP:
 
     scp robotino@172.26.1.1: api2/*
 
@@ -54,4 +54,40 @@ The "robotino-deamons" package will stop and uninstall the previous daemons. Tha
 ##### On the ROS PC
 Next, we need to install ROS and the relevant Robotino ROS packages to a PC.
 
-Installing ROS is well treated on the [ROS wiki](http://wiki.ros.org/ROS/Installation).
+Installing ROS is well treated on the [ROS wiki](http://wiki.ros.org/ROS/Installation). 
+
+Next, create a Catkin workspace. This is also treated on the [wiki](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
+
+Now we need to get the Robotino ROS packages. They are not on the ROS servers, we need to get them via SVN from openrobotino.org. I use wstool to manage the version control. See chapter 3 in this [workspace overlaying tutorial](http://wiki.ros.org/catkin/Tutorials/workspace_overlaying).
+    
+    wstool init
+
+The code is located in http://svn.openrobotino.org/robotino-ros-pkg/trunk/catkin-pkg/ with all the packages in the same repository. I chose to make an entry in the .rosinstall file for each package. Example for `robotino_node`:
+
+    wstool set robotino_node --svn http://svn.openrobotino.org/robotino-ros-pkg/trunk/catkin-pkg/robotino_node/
+
+Then, get the actual code:
+
+    wstool update
+
+Once the code has been downloaded, we need to make sure it's dependencies are met, rosdep will help us here. However, most of the packages depend on robotino_node, which is not in rosdeps repositories and will give an error. So we append the `-r`flag to ignore errors. Beware that this may ignore other errors as well. 
+
+    rosdep install -r --from-paths ./src/
+
+This assumes you are located in the catkin workspace root.
+
+When the code is downloaded and dependencies met and you are located in the workspace root, execute the build command:
+
+    catkin_make
+
+And stuff should start compiling.
+
+Finally, if you are lucky, you can fire off:
+
+    roslaunch robotino_node robotino_node.launch hostname:=172.26.1.1
+
+and
+    
+    roslaunch robotino_teleop joystick_teleop.launch
+
+To move your robot around.
