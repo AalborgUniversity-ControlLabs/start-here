@@ -1,0 +1,15 @@
+# Getting Started with the Arbotix-M
+The Arbotix-M is an open-source robot controller, it is Arduino-compatible and fairly easy to program. It was developed by Michael Ferguson at Vanadium Labs and refined by Trossen Robotics.
+
+Trossen Robotics has a lot of documentation on their [webpage](http://www.trossenrobotics.com/p/arbotix-robot-controller.aspx) under the 'Documentation and Downloads' tab. Therefore the documentation here is a bit sparingly, and may focus on things specific to the setup here in the Automation and Control Labs.
+
+## Programming the Arbotix-M
+You need to install the Arduino IDE to program the controller. Currently (01-09-2015), the Arbotix-M runs on the old Arduino 1.0.6 version. This means that you will need to get and install the old IDE. This, however is actually quite simple. If you have the newest IDE installed already, you don't need uninstall it, the two IDEs can live along side each other. The files are [here](https://www.arduino.cc/en/Main/OldSoftwareReleases).
+
+There are two Windows installers, it is actually easiest to get the non-admin installer. This way, the software will no be installed into C:\program files\ but you can choose to put it wherever. This is clever in that it doen't mess with a previously installed Arduino IDE, and you can customize the IDE for use with the Arbotix-M and Crust Crawler Arms, and when you are done using this old IDE, you can simply delete the install folder, no Windows install/uninstall stuff.
+
+##### Why use the old Arduino IDE?
+The Arduino IDE 1.0.6 has a different implementation of the Arduino core code than the 1.6. Actually looking at the [release notes](https://www.arduino.cc/en/Main/ReleaseNotes), the Arduino IDE 1.0.1 went into a 1.5 BETA branch in late 2012. The new IDE was an attemt to make a unified IDE for both 8-bit AVR and 32-bit ARM based Arduinos. While the 1.5 BETA developed into 1.6 and went out of the BETA stage, the 1.0.1 developed into the 1.0.6. The big difference is how the hardware definition files are handled in the IDE. Also the original Arduino Serial code is too slow to handle the 1Mbps that we run the Crust Crawler Arms at, so a custom implementation was developed in Vanadium Labs. But looking at the developments in the [code on GitHub](https://github.com/vanadiumlabs/arbotix) it seems branches for the 1.5 and 1.6 IDE are popping up. So maybe we can use the new IDE in the near future.
+
+## Why Use a Microcontroller?
+It is convenient to use the Arbotix-M for controlling robots, as there is no operating system on it. This means that there is nothing else running on the controller but what you upload to it. Thus, you can achieve hard real-time guarantees. This is important when doing e.g. trajectory control, where setpoints must be sent to the robot at exact points in time. If you were to try the same on your PC, then suddenly, the trajectory controller might be interrupted because your operating systems wants to install system updates, synchronize your dropbox folder or something else. Actually, your PC handles hundreds or thousands of interrupts every second, where the microcontroller handles none, unless you tell it to.
