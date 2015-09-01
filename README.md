@@ -29,4 +29,3 @@ Check the managed list of contents below. Alternatively, you can manually browse
 ###### Equipment
 - [Robotino](robotino/readme.md)
 - [Crust Crawler Arms](crust-crawler-arms/readme.md)
-- 
