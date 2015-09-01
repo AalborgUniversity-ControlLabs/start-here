@@ -11,7 +11,7 @@ This particular repository (`start-here`) is meant for top level documentation o
 - Etc.
 
 ##### Who Is This For?
-Everyone who is going to use, using, or are woking in the Automation and Control Labs at Fredrik Bajers Vej 7C. You may be a Bachelor-, Masters-, or PhD-student, staff, visiting scholar, or visiting high-school student. Please read on an you may acheive enlightenment.
+Everyone who is going to use, using, or are woking in the Automation and Control Labs at Fredrik Bajers Vej 7C. You may be a Bachelor-, Masters-, or PhD-student, staff, visiting scholar, or visiting high-school student. Please read on and you may acheive enlightenment.
 
 ##### What Goes here?
 Well, each of the other repositories in this organization is supposed to hold software. It is good practice to put documentation with the software, either in raw text or in the wikis provided by GitHub. That documentation should be specific to the software, everything else should go here. For further discourse on the documentation process, have a look at [How to Write Documentation](how-to-document.md).
@@ -28,3 +28,5 @@ Check the managed list of contents below. Alternatively, you can manually browse
 
 ###### Equipment
 - [Robotino](robotino/readme.md)
+- [Crust Crawler Arms](crust-crawler-arms/readme.md)
+- 
