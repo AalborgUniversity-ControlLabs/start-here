@@ -53,3 +53,6 @@ To complicate things, the programmer and the wireless module, XBee, uses the sam
 Now you have plugged in the USB cable, and a new COM port has appeared. On Windows, check your device manager under ports for the COM number. On Linux, it is most likely located under `/dev/ttyUSB0` if no other USB based serial port is plugged in. Go to your IDE and choose the coresponding serial port under `Tools -> Serial Port`.
 
 You are now ready to upload the ArbotixBlink test sketch. Click the upload button in the upper left corner of the IDE; the lights on the programmer will be flashing as it is working. After a short while, the user LED on the ArbotiX-M will be blinking on and off with a one second interval. Success! You set up your PC and programmed the AbotiX-M!
+
+## Next Step
+Now you are ready to move on to [working with the Crust Crawler arms.](./working-with-crust-crawler.md)
