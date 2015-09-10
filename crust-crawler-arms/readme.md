@@ -3,6 +3,9 @@ We have four robotic arms in the lab. They have five degrees of freedom and are 
 
 The arms are based on the Pro-series robotic arm kits from [Crust Crawler Robotics](http://www.crustcrawler.com/products/ProRoboticArm/). The controller boards are the Arbotix-M from [Trossen Robotics](http://www.trossenrobotics.com/p/arbotix-robot-controller.aspx).
 
+##### Tutorial
+Here is a [tutorial on getting started with the Arbotix-M](./getting-started-with-arbotix-m.md).
+
 #### Dynamixel Servos
 The arms are actuated by five Dynamixel servos from Robotis. An MX-64 in the base, an MX-106 in the shoulder, an MX-64 in the elbow and two MX-28 in the hand. The Dynamixel servos incorporates both a DC motor, reduction gear, a magnetic aboslute encoder and an ARM-based PID controller. They can be controlled via position setpoints or alternatively acceleration or torque setpoints. Robotis provides information on the servos on their [support page](http://support.robotis.com/en/).
 
