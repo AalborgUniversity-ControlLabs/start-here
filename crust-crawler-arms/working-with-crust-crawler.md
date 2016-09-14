@@ -62,3 +62,6 @@ Here we are using `ax12SetRegister2`, as we need to set two registers at once. A
 ```
 SetPosition(1, 2500);
 ```
+
+#### Setting the PID gains
+You can modify the PID gains of the servos. Note that when you power-cycle the servos, the PID gains are reset to the default values. There is a [PID demo file](https://github.com/AalborgUniversity-ControlLabs/crust-crawler-arms-arbotix/blob/master/Crust%20Crawler%20Arms/pid_controller/pid_controller.ino) in the [crust-crawler-arms-arbotix repository](https://github.com/AalborgUniversity-ControlLabs/crust-crawler-arms-arbotix). Basically, it invokes the `SetPidGains` function from the `dynamixel_mx` library.
